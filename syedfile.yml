@@ -1,0 +1,16 @@
+---
+- name: install different services
+  hosts: weberver
+  tasks:
+  
+    - name: installing httpd
+      yum:
+        name: http
+        state: present
+        
+    - name: turn one services
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+  

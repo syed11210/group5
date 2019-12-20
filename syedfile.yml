@@ -13,4 +13,15 @@
         name: httpd
         state: started
         enabled: yes
+
+    - name: install telnet
+      yum:
+	name: telnet
+	state: present
+
+    - name: turn on services
+      service:
+	name: telnet
+	state: started
+	enabled: yes
   
